@@ -57,12 +57,14 @@ fEG <= 11;
 subject to krawedz_EH:
 fEH <= 10;
 subject to krawedz_Ft:
-fFt >= 15;
+fFt <= 15;
 subject to krawedz_Gt:
-fGt >= 12;
+fGt <= 12;
 subject to krawedz_Ht:
-fHt >= 8;
+fHt <= 8;
 
+subject to wierzcholekS:
+35 - fsA - fsB - fsC = 0;
 subject to wierzcholekA:
 fsA - fAD - fAE = 0;
 subject to wierzcholekB:
@@ -79,3 +81,5 @@ subject to wierzcholekG:
 fDG + fEG - fGt = 0;
 subject to wierzcholekH:
 fDH + fEH - fHt = 0;
+subject to wierzcholekT:
+fFt + fGt + fHt - 35 = 0;
