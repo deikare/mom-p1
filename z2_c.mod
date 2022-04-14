@@ -38,8 +38,52 @@ var fDt binary;
 var fEt binary;
 var fFt binary;
 
+var y >=0;
+
 minimize funkcja_celu:
-15 * f1A + 14 * f1C + 9 * f1D + 12 * f1F + 12 * f2B + 16 * f2C + 10 * f2E + 11 * f3A + 14 * f3B + 12 * f3D + 16 * f4B + 11 * f4C + 12 * f4E + 13 * f5A + 17 * f5C + 13 * f5D + 15 * f5F + 11 * f6A + 16 * f6E + 18 * f6F;
+y;
+
+subject to y1A:
+y >= 15 * f1A;
+subject to y1C:
+y >= 14 * f1C;
+subject to y1D:
+y >= 9 * f1D;
+subject to y1F:
+y >= 12 * f1F;
+subject to y2B:
+y >= 12 * f2B;
+subject to y2C:
+y >= 16 * f2C;
+subject to y2E:
+y >= 10 * f2E;
+subject to y3A:
+y >= 11 * f3A;
+subject to y3B:
+y >= 14 * f3B;
+subject to y3D:
+y >= 12 * f3D;
+subject to y4B:
+y >= 16 * f4B;
+subject to y4C:
+y >= 11 * f4C;
+subject to y4E:
+y >= 12 * f4E;
+subject to y5A:
+y >= 13 * f5A;
+subject to y5C:
+y >= 17 * f5C;
+subject to y5D:
+y >= 13 * f5D;
+subject to y5F:
+y >= 15 * f5F;
+subject to y6A:
+y >= 11 * f6A;
+subject to y6E:
+y >= 16 * f6E;
+subject to y6F:
+y >= 18 * f6F;
+
 
 subject to wierzcholekS:
 6 - fs1 - fs2 - fs3 - fs4 - fs5 - fs6 = 0;
