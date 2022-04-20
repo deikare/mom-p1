@@ -28,7 +28,7 @@ subject to
 		f[i, j] <= M[i, j];
 	
 	Ustawienie_F_min:
-		F >= sum {i in Nodes} M[i, 10];
+		F >= sum {i in Nodes} M[i, N];
 		
 	Ustawienie_F_max:
 		F <= sum {j in Nodes} M[1, j];
@@ -37,9 +37,9 @@ subject to
 		F - sum {j in Nodes} f[1, j] = 0;
 		
 	Ustawienie_t:
-		sum {i in Nodes} f[i, 10] - F = 0;
+		sum {i in Nodes} f[i, N] - F = 0;
 		
 		
-	Ustawienie_nodes{i in Nodes: i != 1 && i != 10}:
+	Ustawienie_nodes{i in Nodes: i != 1 && i != N}:
 		sum {j in Nodes} f[j, i] - sum {j in Nodes} f[i, j] = 0;
 		
