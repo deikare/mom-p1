@@ -1,74 +1,44 @@
-var fs1 binary;
-var fs2 binary;
-var fs3 binary;
-var fs4 binary;
-var fs5 binary;
-var fs6 binary;
+#======================================================================
+param Model symbolic := "Sieciowe_produkcja_dystrybucja";
+param FileCSV symbolic := "Wyniki_symulacji.csv";
+#======================================================================
+param N := 14;
+set Nodes := 1..N;
 
-var f1A binary;
-var f1C binary;
-var f1D binary;
-var f1F binary;
+param M {Nodes, Nodes} >= 0;
+param K {Nodes, Nodes} >= 0;
 
-var f2B binary;
-var f2C binary;
-var f2E binary;
+table T_M IN "CSV" "M_2b.csv":
+	[i, j], M~M;
 
-var f3A binary;
-var f3B binary;
-var f3D binary;
+table T_K IN "CSV" "K_2b.csv":
+	[i, j], K~K;
 
-var f4B binary;
-var f4C binary;
-var f4E binary;
-
-var f5A binary;
-var f5C binary;
-var f5D binary;
-var f5F binary;
-
-var f6A binary;
-var f6E binary;
-var f6F binary;
-
-var fAt binary;
-var fBt binary;
-var fCt binary;
-var fDt binary;
-var fEt binary;
-var fFt binary;
+#======================================================================
+var f {Nodes, Nodes} binary;
+var F >= 0;
 
 minimize funkcja_celu:
-15 * f1A + 14 * f1C + 9 * f1D + 12 * f1F + 12 * f2B + 16 * f2C + 10 * f2E + 11 * f3A + 14 * f3B + 12 * f3D + 16 * f4B + 11 * f4C + 12 * f4E + 13 * f5A + 17 * f5C + 13 * f5D + 15 * f5F + 11 * f6A + 16 * f6E + 18 * f6F;
+	sum {i in Nodes} (sum {j in Nodes} ( K[i, j] * f[i, j]));
 
-subject to wierzcholekS:
-6 - fs1 - fs2 - fs3 - fs4 - fs5 - fs6 = 0;
+#======================================================================
+subject to
 
-subject to wierzcholek1:
-fs1 - f1A - f1C - f1D - f1F = 0;
-subject to wierzcholek2:
-fs2 - f2B - f2C - f2E = 0;
-subject to wierzcholek3:
-fs3 - f3A - f3B - f3D = 0;
-subject to wierzcholek4:
-fs4 - f4B - f4C - f4E = 0;
-subject to wierzcholek5:
-fs5 - f5A - f5C - f5D - f5F = 0;
-subject to wierzcholek6:
-fs6 - f6A - f6E - f6F = 0;
-
-subject to wierzcholekA:
-f1A + f3A + f5A + f6A - fAt = 0;
-subject to wierzcholekB:
-f2B + f3B + f4B - fBt = 0;
-subject to wierzcholekC:
-f1C + f2C + f4C + f5C - fCt = 0;
-subject to wierzcholekD:
-f1D + f3D + f5D - fDt = 0;
-subject to wierzcholekE:
-f2E + f4E + f6E - fEt = 0;
-subject to wierzcholekF:
-f1F + f5F + f6F - fFt = 0;
-
-subject to wierzcholekT:
-fAt + fBt + fCt + fDt + fEt + fFt - 6 = 0;
+	Ustawienie_f_min{i in Nodes, j in Nodes}:
+		f[i, j] <= M[i, j];
+	
+	Ustawienie_F_min:
+		F >= sum {i in Nodes} M[i, N];
+		
+	Ustawienie_F_max:
+		F <= sum {j in Nodes} M[1, j];
+		
+	Ustawienie_s:
+		F - sum {j in Nodes} f[1, j] = 0;
+		
+	Ustawienie_t:
+		sum {i in Nodes} f[i, N] - F = 0;
+		
+		
+	Ustawienie_nodes{i in Nodes: i != 1 && i != N}:
+		sum {j in Nodes} f[j, i] - sum {j in Nodes} f[i, j] = 0;
