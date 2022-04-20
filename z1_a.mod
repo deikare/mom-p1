@@ -1,97 +1,45 @@
-var fsA>=0;
-var fsB>=0;
-var fsC>=0;
+#======================================================================
+param Model symbolic := "Sieciowe_produkcja_dystrybucja";
+param FileCSV symbolic := "Wyniki_symulacji.csv";
+#======================================================================
+param N := 10;
+set Nodes := 1..N;
 
-var fAD>=0;
-var fAE>=0;
+param M {Nodes, Nodes} >= 0;
+param K {Nodes, Nodes} >= 0;
 
-var fBD>=0;
-var fBE>=0;
+table T_M IN "CSV" "M.csv":
+	[i, j], M~M;
 
-var fCD>=0;
-var fCE>=0;
+table T_K IN "CSV" "K.csv":
+	[i, j], K~K;
 
-var fDE>=0;
-var fDF>=0;
-var fDG>=0;
-var fDH>=0;
-
-var fED>=0;
-var fEF>=0;
-var fEG>=0;
-var fEH>=0;
-
-var fFt>=0;
-var fGt>=0;
-var fHt>=0;
+#======================================================================
+var f {Nodes, Nodes} >= 0;
+var F >= 0;
 
 minimize funkcja_celu:
-3*fAD + 6*fAE + 6*fBD + 3*fBE + 4*fCD + 5*fCE + 2*fDE + 5*fDF + 7*fDG + 3*fDH + 2*fED + 5*fEF + 4*fEG + 2*fEH;
+	sum {i in Nodes} (sum {j in Nodes} ( K[i, j] * f[i, j]));
 
-subject to krawedz_sA:
-fsA <= 10;
-subject to krawedz_sB:
-fsB <= 13;
-subject to krawedz_sC:
-fsC <= 17;
+#======================================================================
+subject to
 
-subject to krawedz_AD:
-fAD <= 8;
-subject to krawedz_AE:
-fAE <= 10;
-
-subject to krawedz_BD:
-fBD <= 10;
-subject to krawedz_BE:
-fBE <= 13;
-
-subject to krawedz_CD:
-fCD <= 10;
-subject to krawedz_CE:
-fCE <= 6;
-
-subject to krawedz_DE:
-fDE <= 20;
-subject to krawedz_DF:
-fDF <= 16;
-subject to krawedz_DG:
-fDG <= 5;
-subject to krawedz_DH:
-fDH <= 10;
-
-subject to krawedz_ED:
-fED <= 20;
-subject to krawedz_EF:
-fEF <= 7;
-subject to krawedz_EG:
-fEG <= 11;
-subject to krawedz_EH:
-fEH <= 10;
-
-subject to krawedz_Ft:
-fFt <= 15;
-subject to krawedz_Gt:
-fGt <= 12;
-subject to krawedz_Ht:
-fHt <= 8;
-
-subject to wierzcholekS:
-35 - fsA - fsB - fsC = 0;
-subject to wierzcholekA:
-fsA - fAD - fAE = 0;
-subject to wierzcholekB:
-fsB - fBD - fBE = 0;
-subject to wierzcholekC:
-fsC - fCD - fCE = 0;
-subject to wierzcholekD:
-fAD + fBD + fCD + fED - fDE - fDF - fDG - fDH = 0;
-subject to wierzcholekE:
-fAE + fBE + fCE + fDE - fED - fEF - fEG - fEH = 0;
-subject to wierzcholekF:
-fDF + fEF - fFt = 0;
-subject to wierzcholekG:
-fDG + fEG - fGt = 0;
-subject to wierzcholekH:
-fDH + fEH - fHt = 0;
-subject to wierzcholekT:
-fFt + fGt + fHt - 35 = 0;
+	Ustawienie_f_min{i in Nodes, j in Nodes}:
+		f[i, j] <= M[i, j];
+	
+	Ustawienie_F_min:
+		F >= sum {i in Nodes} M[i, 10];
+		
+	Ustawienie_F_max:
+		F <= sum {j in Nodes} M[1, j];
+		
+	Ustawienie_s:
+		F - sum {j in Nodes} f[1, j] = 0;
+		
+	Ustawienie_t:
+		sum {i in Nodes} f[i, 10] - F = 0;
+		
+		
+	Ustawienie_nodes{i in Nodes: i != 1 && i != 10}:
+		sum {j in Nodes} f[j, i] - sum {j in Nodes} f[i, j] = 0;
+		
