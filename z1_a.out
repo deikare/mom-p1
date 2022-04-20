@@ -1,0 +1,356 @@
+Problem:    z1_a
+Rows:       113
+Columns:    101
+Non-zeros:  282
+Status:     OPTIMAL
+Objective:  funkcja_celu = 267 (MINimum)
+
+   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 funkcja_celu B            267                             
+     2 Ustawienie_f_min[1,1]
+                    NU             0                          -0            -5 
+     3 Ustawienie_f_min[1,2]
+                    B              8                          10 
+     4 Ustawienie_f_min[1,3]
+                    NU            13                          13            -2 
+     5 Ustawienie_f_min[1,4]
+                    B             14                          17 
+     6 Ustawienie_f_min[1,5]
+                    NU             0                          -0            -4 
+     7 Ustawienie_f_min[1,6]
+                    NU             0                          -0            -5 
+     8 Ustawienie_f_min[1,7]
+                    NU             0                          -0            -9 
+     9 Ustawienie_f_min[1,8]
+                    NU             0                          -0           -11 
+    10 Ustawienie_f_min[1,9]
+                    NU             0                          -0            -7 
+    11 Ustawienie_f_min[1,10]
+                    NU             0                          -0           -11 
+    12 Ustawienie_f_min[2,1]
+                    NU             0                          -0            -5 
+    13 Ustawienie_f_min[2,2]
+                    NU             0                          -0         < eps
+    14 Ustawienie_f_min[2,3]
+                    NU             0                          -0            -2 
+    15 Ustawienie_f_min[2,4]
+                    NU             0                          -0         < eps
+    16 Ustawienie_f_min[2,5]
+                    NU             8                           8            -1 
+    17 Ustawienie_f_min[2,6]
+                    B              0                          10 
+    18 Ustawienie_f_min[2,7]
+                    NU             0                          -0            -9 
+    19 Ustawienie_f_min[2,8]
+                    NU             0                          -0           -11 
+    20 Ustawienie_f_min[2,9]
+                    NU             0                          -0            -7 
+    21 Ustawienie_f_min[2,10]
+                    NU             0                          -0           -11 
+    22 Ustawienie_f_min[3,1]
+                    NU             0                          -0            -3 
+    23 Ustawienie_f_min[3,2]
+                    B              0                          -0 
+    24 Ustawienie_f_min[3,3]
+                    NU             0                          -0         < eps
+    25 Ustawienie_f_min[3,4]
+                    B              0                          -0 
+    26 Ustawienie_f_min[3,5]
+                    B              0                          10 
+    27 Ustawienie_f_min[3,6]
+                    B             13                          13 
+    28 Ustawienie_f_min[3,7]
+                    NU             0                          -0            -7 
+    29 Ustawienie_f_min[3,8]
+                    NU             0                          -0            -9 
+    30 Ustawienie_f_min[3,9]
+                    NU             0                          -0            -5 
+    31 Ustawienie_f_min[3,10]
+                    NU             0                          -0            -9 
+    32 Ustawienie_f_min[4,1]
+                    NU             0                          -0            -5 
+    33 Ustawienie_f_min[4,2]
+                    NU             0                          -0         < eps
+    34 Ustawienie_f_min[4,3]
+                    NU             0                          -0            -2 
+    35 Ustawienie_f_min[4,4]
+                    NU             0                          -0         < eps
+    36 Ustawienie_f_min[4,5]
+                    B              8                          10 
+    37 Ustawienie_f_min[4,6]
+                    B              6                           6 
+    38 Ustawienie_f_min[4,7]
+                    NU             0                          -0            -9 
+    39 Ustawienie_f_min[4,8]
+                    NU             0                          -0           -11 
+    40 Ustawienie_f_min[4,9]
+                    NU             0                          -0            -7 
+    41 Ustawienie_f_min[4,10]
+                    NU             0                          -0           -11 
+    42 Ustawienie_f_min[5,1]
+                    NU             0                          -0            -1 
+    43 Ustawienie_f_min[5,2]
+                    B              0                          -0 
+    44 Ustawienie_f_min[5,3]
+                    B              0                          -0 
+    45 Ustawienie_f_min[5,4]
+                    B              0                          -0 
+    46 Ustawienie_f_min[5,5]
+                    NU             0                          -0         < eps
+    47 Ustawienie_f_min[5,6]
+                    B              0                          20 
+    48 Ustawienie_f_min[5,7]
+                    B             15                          16 
+    49 Ustawienie_f_min[5,8]
+                    B              1                           5 
+    50 Ustawienie_f_min[5,9]
+                    B              0                          10 
+    51 Ustawienie_f_min[5,10]
+                    NU             0                          -0            -7 
+    52 Ustawienie_f_min[6,1]
+                    NU             0                          -0         < eps
+    53 Ustawienie_f_min[6,2]
+                    B              0                          -0 
+    54 Ustawienie_f_min[6,3]
+                    B              0                          -0 
+    55 Ustawienie_f_min[6,4]
+                    B              0                          -0 
+    56 Ustawienie_f_min[6,5]
+                    B              0                          20 
+    57 Ustawienie_f_min[6,6]
+                    NU             0                          -0         < eps
+    58 Ustawienie_f_min[6,7]
+                    B              0                           7 
+    59 Ustawienie_f_min[6,8]
+                    NU            11                          11            -2 
+    60 Ustawienie_f_min[6,9]
+                    B              8                          10 
+    61 Ustawienie_f_min[6,10]
+                    NU             0                          -0            -6 
+    62 Ustawienie_f_min[7,1]
+                    B              0                          -0 
+    63 Ustawienie_f_min[7,2]
+                    B              0                          -0 
+    64 Ustawienie_f_min[7,3]
+                    B              0                          -0 
+    65 Ustawienie_f_min[7,4]
+                    B              0                          -0 
+    66 Ustawienie_f_min[7,5]
+                    B              0                          -0 
+    67 Ustawienie_f_min[7,6]
+                    B              0                          -0 
+    68 Ustawienie_f_min[7,7]
+                    NU             0                          -0         < eps
+    69 Ustawienie_f_min[7,8]
+                    NU             0                          -0            -2 
+    70 Ustawienie_f_min[7,9]
+                    B              0                          -0 
+    71 Ustawienie_f_min[7,10]
+                    NU            15                          15            -2 
+    72 Ustawienie_f_min[8,1]
+                    B              0                          -0 
+    73 Ustawienie_f_min[8,2]
+                    B              0                          -0 
+    74 Ustawienie_f_min[8,3]
+                    B              0                          -0 
+    75 Ustawienie_f_min[8,4]
+                    B              0                          -0 
+    76 Ustawienie_f_min[8,5]
+                    B              0                          -0 
+    77 Ustawienie_f_min[8,6]
+                    B              0                          -0 
+    78 Ustawienie_f_min[8,7]
+                    B              0                          -0 
+    79 Ustawienie_f_min[8,8]
+                    NU             0                          -0         < eps
+    80 Ustawienie_f_min[8,9]
+                    B              0                          -0 
+    81 Ustawienie_f_min[8,10]
+                    B             12                          12 
+    82 Ustawienie_f_min[9,1]
+                    B              0                          -0 
+    83 Ustawienie_f_min[9,2]
+                    B              0                          -0 
+    84 Ustawienie_f_min[9,3]
+                    B              0                          -0 
+    85 Ustawienie_f_min[9,4]
+                    B              0                          -0 
+    86 Ustawienie_f_min[9,5]
+                    B              0                          -0 
+    87 Ustawienie_f_min[9,6]
+                    B              0                          -0 
+    88 Ustawienie_f_min[9,7]
+                    NU             0                          -0            -2 
+    89 Ustawienie_f_min[9,8]
+                    NU             0                          -0            -4 
+    90 Ustawienie_f_min[9,9]
+                    NU             0                          -0         < eps
+    91 Ustawienie_f_min[9,10]
+                    NU             8                           8            -4 
+    92 Ustawienie_f_min[10,1]
+                    NU             0                          -0         < eps
+    93 Ustawienie_f_min[10,2]
+                    B              0                          -0 
+    94 Ustawienie_f_min[10,3]
+                    B              0                          -0 
+    95 Ustawienie_f_min[10,4]
+                    B              0                          -0 
+    96 Ustawienie_f_min[10,5]
+                    B              0                          -0 
+    97 Ustawienie_f_min[10,6]
+                    NU             0                          -0         < eps
+    98 Ustawienie_f_min[10,7]
+                    NU             0                          -0            -4 
+    99 Ustawienie_f_min[10,8]
+                    NU             0                          -0            -6 
+   100 Ustawienie_f_min[10,9]
+                    NU             0                          -0            -2 
+   101 Ustawienie_f_min[10,10]
+                    NU             0                          -0            -6 
+   102 Ustawienie_F_min
+                    NL            35            35                          11 
+   103 Ustawienie_F_max
+                    B             35                          40 
+   104 Ustawienie_s NS             0            -0             =            -5 
+   105 Ustawienie_t NS             0            -0             =             6 
+   106 Ustawienie_nodes[2]
+                    NS             0            -0             =            -5 
+   107 Ustawienie_nodes[3]
+                    NS             0            -0             =            -3 
+   108 Ustawienie_nodes[4]
+                    NS             0            -0             =            -5 
+   109 Ustawienie_nodes[5]
+                    NS             0            -0             =            -1 
+   110 Ustawienie_nodes[6]
+                    B              0            -0             = 
+   111 Ustawienie_nodes[7]
+                    NS             0            -0             =             4 
+   112 Ustawienie_nodes[8]
+                    NS             0            -0             =             6 
+   113 Ustawienie_nodes[9]
+                    NS             0            -0             =             2 
+
+   No. Column name  St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 f[1,1]       B              0             0               
+     2 f[1,2]       B              8             0               
+     3 f[1,3]       B             13             0               
+     4 f[1,4]       B             14             0               
+     5 f[1,5]       B              0             0               
+     6 f[1,6]       B              0             0               
+     7 f[1,7]       B              0             0               
+     8 f[1,8]       B              0             0               
+     9 f[1,9]       B              0             0               
+    10 f[1,10]      B              0             0               
+    11 f[2,1]       B              0             0               
+    12 f[2,2]       B              0             0               
+    13 f[2,3]       B              0             0               
+    14 f[2,4]       B              0             0               
+    15 f[2,5]       B              8             0               
+    16 f[2,6]       NL             0             0                           1 
+    17 f[2,7]       B              0             0               
+    18 f[2,8]       B              0             0               
+    19 f[2,9]       B              0             0               
+    20 f[2,10]      B              0             0               
+    21 f[3,1]       B              0             0               
+    22 f[3,2]       NL             0             0                           2 
+    23 f[3,3]       B              0             0               
+    24 f[3,4]       NL             0             0                           2 
+    25 f[3,5]       NL             0             0                           4 
+    26 f[3,6]       B             13             0               
+    27 f[3,7]       B              0             0               
+    28 f[3,8]       B              0             0               
+    29 f[3,9]       B              0             0               
+    30 f[3,10]      B              0             0               
+    31 f[4,1]       B              0             0               
+    32 f[4,2]       B              0             0               
+    33 f[4,3]       B              0             0               
+    34 f[4,4]       B              0             0               
+    35 f[4,5]       B              8             0               
+    36 f[4,6]       B              6             0               
+    37 f[4,7]       B              0             0               
+    38 f[4,8]       B              0             0               
+    39 f[4,9]       B              0             0               
+    40 f[4,10]      B              0             0               
+    41 f[5,1]       B              0             0               
+    42 f[5,2]       NL             0             0                           4 
+    43 f[5,3]       NL             0             0                           2 
+    44 f[5,4]       NL             0             0                           4 
+    45 f[5,5]       B              0             0               
+    46 f[5,6]       NL             0             0                           1 
+    47 f[5,7]       B             15             0               
+    48 f[5,8]       B              1             0               
+    49 f[5,9]       NL             0             0                       < eps
+    50 f[5,10]      B              0             0               
+    51 f[6,1]       B              0             0               
+    52 f[6,2]       NL             0             0                           5 
+    53 f[6,3]       NL             0             0                           3 
+    54 f[6,4]       NL             0             0                           5 
+    55 f[6,5]       NL             0             0                           3 
+    56 f[6,6]       B              0             0               
+    57 f[6,7]       NL             0             0                           1 
+    58 f[6,8]       B             11             0               
+    59 f[6,9]       B              8             0               
+    60 f[6,10]      B              0             0               
+    61 f[7,1]       NL             0             0                           4 
+    62 f[7,2]       NL             0             0                           9 
+    63 f[7,3]       NL             0             0                           7 
+    64 f[7,4]       NL             0             0                           9 
+    65 f[7,5]       NL             0             0                           5 
+    66 f[7,6]       NL             0             0                           4 
+    67 f[7,7]       B              0             0               
+    68 f[7,8]       B              0             0               
+    69 f[7,9]       NL             0             0                           2 
+    70 f[7,10]      B             15             0               
+    71 f[8,1]       NL             0             0                           6 
+    72 f[8,2]       NL             0             0                          11 
+    73 f[8,3]       NL             0             0                           9 
+    74 f[8,4]       NL             0             0                          11 
+    75 f[8,5]       NL             0             0                           7 
+    76 f[8,6]       NL             0             0                           6 
+    77 f[8,7]       NL             0             0                           2 
+    78 f[8,8]       B              0             0               
+    79 f[8,9]       NL             0             0                           4 
+    80 f[8,10]      B             12             0               
+    81 f[9,1]       NL             0             0                           2 
+    82 f[9,2]       NL             0             0                           7 
+    83 f[9,3]       NL             0             0                           5 
+    84 f[9,4]       NL             0             0                           7 
+    85 f[9,5]       NL             0             0                           3 
+    86 f[9,6]       NL             0             0                           2 
+    87 f[9,7]       B              0             0               
+    88 f[9,8]       B              0             0               
+    89 f[9,9]       B              0             0               
+    90 f[9,10]      B              8             0               
+    91 f[10,1]      B              0             0               
+    92 f[10,2]      NL             0             0                           5 
+    93 f[10,3]      NL             0             0                           3 
+    94 f[10,4]      NL             0             0                           5 
+    95 f[10,5]      NL             0             0                           1 
+    96 f[10,6]      B              0             0               
+    97 f[10,7]      B              0             0               
+    98 f[10,8]      B              0             0               
+    99 f[10,9]      B              0             0               
+   100 f[10,10]     B              0             0               
+   101 F            B             35             0               
+
+Karush-Kuhn-Tucker optimality conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.DE: max.abs.err = 0.00e+00 on column 0
+        max.rel.err = 0.00e+00 on column 0
+        High quality
+
+KKT.DB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output
