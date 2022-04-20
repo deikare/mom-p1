@@ -8,10 +8,10 @@ set Nodes := 1..N;
 param M {Nodes, Nodes} >= 0;
 param K {Nodes, Nodes} >= 0;
 
-table T_M IN "CSV" "M.csv":
+table T_M IN "CSV" "M_1a.csv":
 	[i, j], M~M;
 
-table T_K IN "CSV" "K.csv":
+table T_K IN "CSV" "K_1a.csv":
 	[i, j], K~K;
 
 #======================================================================
