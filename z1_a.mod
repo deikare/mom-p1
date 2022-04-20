@@ -42,4 +42,3 @@ subject to
 		
 	Ustawienie_nodes{i in Nodes: i != 1 && i != N}:
 		sum {j in Nodes} f[j, i] - sum {j in Nodes} f[i, j] = 0;
-		
