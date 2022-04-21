@@ -14,9 +14,9 @@ table T_Plan IN "CSV" "plan.csv":
 param w1 := 0.5;
 param w2 := 0.5;
 #======================================================================
-var X {Dostawy} integer >= 0;
-var X_plus {Dostawy} integer >= 0;
-var X_minus {Dostawy} integer >= 0;
+var X {Dostawy} >= 0;
+var X_plus {Dostawy} >= 0;
+var X_minus {Dostawy} >= 0;
 
 var y >= 0;
 var s >= 0;
@@ -26,6 +26,9 @@ minimize funkcja_celu:
 
 #======================================================================
 subject to
+
+	Ustawienie_X_sumy:
+		sum {i in Dostawy} (X[i]) = sum {i in Dostawy} Plany[i];
 
 	Ustawienie_y{i in Dostawy}:
 		y >= (X_plus[i] + X_minus[i]);
